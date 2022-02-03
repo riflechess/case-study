@@ -1,0 +1,17 @@
+version: "3"
+services:
+  cs-lfs-service:
+    image: case-study:latest
+    build:
+      context: .
+      dockerfile: dockerfile
+    ports:
+      - "80:80"
+    deploy:
+        resources:
+            limits:
+              cpus: "1.0"
+              memory: 1024M
+            reservations:
+              cpus: "0.50"
+              memory: 128M

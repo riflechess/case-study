@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Case Study - lfs</title>
+
+<style>
+
+</style>
+</head>
+<body>
+
+
+<br><br>
+<p>
+<b>Usage</b><br>
+<code>lfs</code> will provide a json-formatted list of files, their size (in bytes) from a specified directory/filesystem.<br>
+<br>
+Use the links below, or use a REST client <code>GET /lfs.php?fs=[filesystem]</code>
+<br><br>
+
+
+<b>Examples</b>
+<code><br>
+<a href="lfs.php?fs=/var">lfs /var</a><br>
+<a href="lfs.php?fs=/var">lfs /usr</a><br>
+<a href="lfs.php?fs=/var">lfs /etc</a><br>
+<a href="lfs.php?fs=/var">lfs /bin</a><br>
+<a href="lfs.php?fs=--help">lfs --help</a><br>
+</code>
+</p>
+<br><br>
+<code>curl "https://cs.sitsev.net/lfs.php?fs=/var" &gt; var.json</code>
+
+</body>
+</html>

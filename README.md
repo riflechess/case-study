@@ -86,3 +86,23 @@ Project includes a test module, `test-module.sh`.
 20220202_063500 - Tests completed successfully.
 20220202_063500 - /tmp/cs/4a31 removed
 ```
+
+### web service
+Project has a simple REST webservice under `./site`, and hosted at [https://cs.sitsev.net/](https://cs.sitsev.net/).  
+
+The project contains a binary that was built on Ubuntu on `x86_64`, so it may need to be rebuilt (instructions above) to work on another platform.  
+
+#### deploy web service
+
+```
+# clone repostiory
+git@github.com:riflechess/case-study.git
+cd case-study/site
+
+# bring up container (docker compose)
+docker-compose up -d
+```
+#### call web service
+```
+curl "https://cs.sitsev.net/lfs.php?fs=/var"
+```
