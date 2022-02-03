@@ -32,7 +32,7 @@ $ ./lfs /tmp/cs
 
 ```shell
 # Use default rustup installation procedure from https://doc.rust-lang.org/book/ch01-01-installation.html
-$ curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
+curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
 
 # Source your path
 source $HOME/.cargo/env
