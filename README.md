@@ -105,7 +105,7 @@ docker-compose up -d
 ```
 curl "https://cs.sitsev.net/lfs.php?fs=/var"
 ```
-
+Alternatively, there are a few samples on [https://cs.sitsev.net/](https://cs.sitsev.net/).
 ### performance
 `lfs` has fairly good performance.
 
