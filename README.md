@@ -32,7 +32,7 @@ $ ./lfs /tmp/cs
 
 ```shell
 # Use default rustup installation procedure from https://doc.rust-lang.org/book/ch01-01-installation.html
-$ curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
+curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
 
 # Source your path
 source $HOME/.cargo/env
@@ -105,7 +105,7 @@ docker-compose up -d
 ```
 curl "https://cs.sitsev.net/lfs.php?fs=/var"
 ```
-
+Alternatively, there are a few samples on [https://cs.sitsev.net/](https://cs.sitsev.net/).
 ### performance
 `lfs` has fairly good performance.
 
@@ -120,7 +120,7 @@ real	0m0.026s
 user	0m0.015s
 sys	0m0.011s
 
-# find + stat
+# find + stat (to get file sizes)
 $ time sudo find /opt -type f -exec stat -c %s {} \; >> /dev/null
 real	0m1.033s
 user	0m0.755s
