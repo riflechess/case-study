@@ -92,8 +92,7 @@ Project has a simple REST webservice under `./site`, and hosted at [https://cs.s
 
 The project contains a binary that was built on Ubuntu on `x86_64`, so it may need to be rebuilt (instructions above) to work on another platform.  
 
-#### deploy web service
-
+##### deploy web service
 ```
 # clone repostiory
 git@github.com:riflechess/case-study.git
@@ -102,7 +101,32 @@ cd case-study/site
 # bring up container (docker compose)
 docker-compose up -d
 ```
-#### call web service
+##### call web service
 ```
 curl "https://cs.sitsev.net/lfs.php?fs=/var"
 ```
+
+### performance
+`lfs` has fairly good performance.
+
+```shell
+# target fs /opt
+$ sudo find /opt -type f | wc -l
+1044
+
+# lfs
+$ time sudo ./lfs /opt >> /dev/null
+real	0m0.026s
+user	0m0.015s
+sys	0m0.011s
+
+# find + stat
+$ time sudo find /opt -type f -exec stat -c %s {} \; >> /dev/null
+real	0m1.033s
+user	0m0.755s
+sys	0m0.291s
+
+```
+
+
+
