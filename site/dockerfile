@@ -11,11 +11,11 @@ RUN apt-get update && \
 COPY ./www/ /var/www/html/
 COPY ./binary/lfs /usr/local/bin/
 
-RUN chown -R www-data:www-data /var/www/html/ && \
-    a2enmod ssl && \
-    a2enmod rewrite && \
-    mv /var/www/html/cs.conf /etc/apache2/sites-available/ && \
-    chmod u+s /usr/local/bin/lfs 
+RUN mv /var/www/html/cs.conf /etc/apache2/sites-available/ && \
+    chmod u+s /usr/local/bin/lfs && \
+    sed -e 's/Options Indexes/Options /g' -i /etc/apache2/apache2.conf && \ 
+    echo "ServerSignature Off" >> /etc/apache2/apache2.conf && \
+    echo "ServerTokens Prod" >> /etc/apache2/apache2.conf  
 
 RUN a2ensite cs && a2dissite 000-default
 
