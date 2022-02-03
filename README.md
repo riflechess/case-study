@@ -120,7 +120,7 @@ real	0m0.026s
 user	0m0.015s
 sys	0m0.011s
 
-# find + stat
+# find + stat (to get file sizes)
 $ time sudo find /opt -type f -exec stat -c %s {} \; >> /dev/null
 real	0m1.033s
 user	0m0.755s
