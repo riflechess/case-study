@@ -2,7 +2,6 @@ FROM php:7.4-apache
 
 RUN apt-get update && \
     apt-get install -y vim net-tools procps curl iputils-ping  && \
-    mkdir -p /opt/solr/af_dataset/ && \ 
     sed -i 's/# alias ll/alias ll/g' /root/.bashrc && \
     sed -i 's/# alias ls/alias ls/g' /root/.bashrc && \
     sed -i 's/# export LS_OPTIONS/export LS_OPTIONS/g' /root/.bashrc && \
