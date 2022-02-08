@@ -127,6 +127,7 @@ user	0m0.755s
 sys	0m0.291s
 
 ```
-
-
-
+### go implementation
+I was curious to see how this would perform and look using golang, so reproduced the code under `./go/lfs-go.go`.
+ - Binary is 3.6MB in Rust vs. 1.9MB in go
+ - Execution times for `lfs` on 175k files were 1.418s (Rust) vs 1.309s (go)
